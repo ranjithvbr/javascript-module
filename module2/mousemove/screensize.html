@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #pageSize, #screenSize {
+  border:1px solid red;
+  padding: 2px;
+  color:red;
+}
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example1 of the 'resize' event</title>
+</head>
+<body>
+  <script>
+    window.onload = resize;
+window.onresize = resize;
+
+function resize(evt) {
+  console.log("resize");
+  var pageSizeSpan = document.querySelector('#pageSize');
+  pageSizeSpan.innerHTML = "Width: " + window.innerWidth + " Height: " + window.innerHeight;
+
+var screenSizeSpan = document.querySelector('#screenSize');
+  screenSizeSpan.innerHTML = "Width: " + screen.width + " Height: " + screen.height;
+
+}
+    </script>
+  <p>This page uses <code>window.onresize = resize;</code> in the JS code  to execute the resize function. Try to change the size of your window now!</p>
+
+  <p>Curent page size: <span id="pageSize"></span></p>
+  <p>Screen size: <span id="screenSize"></span></p>
+
+</body>
+</html>

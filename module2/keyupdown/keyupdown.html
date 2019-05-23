@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example of the 'keyup' and 'keydown' events on the window object</title>
+</head>
+
+  <body>
+    <p>Please type some keys and see what happens</p>
+    <div id="keys"></div>
+    <script>
+      window.onkeyup = processKeyUp;
+    window.onkeydown = processKeyDown;
+    function processKeyUp(evt) {
+      var keys = document.querySelector('#keys');
+      keys.innerHTML += "keyup: " + evt.key + " code: " + evt.keyCode + "<br>";
+    }
+
+    function processKeyDown(evt) {
+      var keys = document.querySelector('#keys');
+      keys.innerHTML += "keydown: " + evt.key + " code: " + evt.keyCode + "<br>";
+    }
+      </script>
+  </body>
+</html>
