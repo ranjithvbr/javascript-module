@@ -43,3 +43,32 @@
 
  </body>
  </html>
+
+    function first(f,s) {
+        this.f=f;
+        this.s=s;
+        return 5
+    };
+
+
+// first.prototype.age=21
+// var data=new first ("ran","jith")
+// console.log(data.f)
+// console.log(data.s)
+
+// console.log(data.age)
+// console.log(data)
+// console.log(typeof(data.age))
+
+// // ---------------------------------------
+
+// function MyFunc() {
+//     this.x = 100;
+               
+//     return { a: 123 };
+// }
+
+// var obj1 =  MyFunc();
+
+// console.log(obj1)
+// console.log(obj1.x)
